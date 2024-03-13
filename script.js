@@ -6,6 +6,14 @@ function validateSyntax() {
     let result =  // Placeholder for validation result
     booli =false
     let isYear = input.slice(5,8)
+    let isName = input.slice(9,100)
+
+
+    //these are for determining if last bit is text
+    function alphabetTester(){
+        let regex = /^[a-zA-Z]+$/;
+        return regex.test(isName)  
+        }
 
 
     function isNumber(isYear) {
@@ -13,7 +21,7 @@ function validateSyntax() {
         }
 
 
-    if(Code===isCode && isNumber(isYear)===true)
+    if(Code===isCode && isNumber(isYear)===true && alphabetTester()===true)
     {booli = true}
     // TODO: Write your validation logic here
         // Check if input starts with 'pet_' and followed by alphanumeric characters
@@ -23,6 +31,8 @@ function validateSyntax() {
         { result=""}
         else {result="Invalid Index 🛑"}
            document.getElementById('result').innerText = result;
+           document.getElementById('petInput').innerText = ""
+           return result
 }
 
 
