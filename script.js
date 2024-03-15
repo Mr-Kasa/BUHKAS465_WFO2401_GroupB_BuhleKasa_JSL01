@@ -18,12 +18,12 @@ function validateSyntax() {
 
     //test if index 5-8 are numerical entry
     function isNumber(isYear) {
-        return !isNaN(parseInt(isYear)) && isFinite(isYear);           // tests string if it is a numerical value,      
+        return !isNaN(parseInt(isYear)) && isFinite(isYear);           // tests string if it is a numerical value, if parseInt is NaN then is not numerical      
         }
         
 
 
-    if(Code===isCode  && isNumber(isYear)===true && alphabetTester()===true)
+    if(Code===isCode  && isNumber(isYear)===true && alphabetTester()===true)     // conditional statements for Ui output
     {booli = true}
 
     if(booli===true)
@@ -32,10 +32,9 @@ function validateSyntax() {
     { result=""}
     else {result="Invalid Index 🛑"}
 
-   console.log(result)
+ 
     document.getElementById('result').innerText = result
     document.getElementById('petInput').innerText = ""
-    return result
 }
     
 
